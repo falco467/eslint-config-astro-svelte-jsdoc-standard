@@ -4,21 +4,12 @@
 
 An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for JavaScript Projects using Astro and Svelte with JSDoc Type-Information that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has rules supporting type-information from [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
 
-# Peer dependencies 
-
-This package specifies the following `peerDependencies`:
-
-- [ESLint](https://github.com/eslint/eslint)
-- [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) ESLint rules for TypeScript.
-- [eslint-plugin-astro](https://www.npmjs.com/package/eslint-plugin-astro) Parser for Astro files.
-- [eslint-plugin-svelte](https://www.npmjs.com/package/eslint-plugin-svelte) Parser for Svelte files.
-
 # Usage
 
 Add all packages to your project:
 
 ```
-npm install --save-dev eslint eslint-plugin-astro eslint-plugin-svelte eslint-config-standard eslint-config-astro-svelte-jsdoc-standard
+npm install --save-dev eslint-config-astro-svelte-jsdoc-standard
 ```
 
 Edit your `.eslintrc.js`:
@@ -29,9 +20,7 @@ module.exports = {
 }
 ```
 
-Note: Please read some important instructions regarding the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
-
-There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
+You may want to override and configure [some `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) in ESLint when using this package.
 
 # Example command line usage:
 
