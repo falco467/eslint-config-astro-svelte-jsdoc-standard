@@ -1,0 +1,31 @@
+{
+  "name": "eslint-config-astro-svelte-jsdoc-standard",
+  "version": "1.0.0",
+  "description": "Sharable ESLint config based on JavaScript Standard Style and @typescript-eslint/recommended-requiring-type-checking which supports .astro and .svelte files with JavaScript code using JSDoc comments for strong typing.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falco467/eslint-config-astro-svelte-jsdoc-standard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/falco467/eslint-config-astro-svelte-jsdoc-standard/issues"
+  },
+  "homepage": "https://github.com/falco467/eslint-config-astro-svelte-jsdoc-standard#readme",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "astro",
+    "svelte",
+    "jsdoc",
+    "standard"
+  ],
+  "author": "falco467@gmail.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "eslint-config-standard": ">= 17",
+    "eslint-plugin-astro": ">= 0",
+    "eslint-plugin-svelte": ">= 2"
+  },
+  "files": ["index.js"]
+}
