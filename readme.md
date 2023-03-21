@@ -15,10 +15,10 @@ This package specifies the following `peerDependencies`:
 
 # Usage
 
-Add this configuration to your project:
+Add all packages to your project:
 
 ```
-npm install --save-dev eslint-config-astro-svelte-jsdoc-standard
+npm install --save-dev eslint eslint-plugin-astro eslint-plugin-svelte eslint-config-standard eslint-config-astro-svelte-jsdoc-standard
 ```
 
 Edit your `.eslintrc.js`:
