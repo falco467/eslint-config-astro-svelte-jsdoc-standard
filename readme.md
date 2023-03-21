@@ -13,16 +13,19 @@ This package specifies the following `peerDependencies`:
 - [eslint-plugin-astro](https://www.npmjs.com/package/eslint-plugin-astro) Parser for Astro files.
 - [eslint-plugin-svelte](https://www.npmjs.com/package/eslint-plugin-svelte) Parser for Svelte files.
 
-# Example config
+# Usage
 
-Here is an example `.eslintrc.js`:
+Add this configuration to your project:
+
+```
+npm install --save-dev eslint-config-astro-svelte-jsdoc-standard
+```
+
+Edit your `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: 'eslint-config-astro-svelte-jsdoc-standard',
-  parserOptions: {
-    project: './tsconfig.json'
-  }
+  extends: 'eslint-config-astro-svelte-jsdoc-standard'
 }
 ```
 
@@ -33,5 +36,5 @@ There are [some more `parserOptions`](https://github.com/typescript-eslint/types
 # Example command line usage:
 
 ```
-$ npx eslint src
+$ npx eslint .
 ```
