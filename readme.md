@@ -16,7 +16,8 @@ Edit your `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: 'eslint-config-astro-svelte-jsdoc-standard'
+  extends: [ 'eslint-config-astro-svelte-jsdoc-standard' ],
+  parserOptions: { tsconfigRootDir: __dirname }
 }
 ```
 
