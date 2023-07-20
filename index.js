@@ -8,6 +8,10 @@ module.exports = {
   rules: {
     // Needed for svelte reactivity assignment
     'no-self-assign': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { "argsIgnorePattern": "^_" }
+    ],
     // Needed to call async function without await
     'no-void': 'off',
 
