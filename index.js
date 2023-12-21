@@ -12,6 +12,15 @@ module.exports = {
       'error',
       { "argsIgnorePattern": "^_" }
     ],
+
+    // Needed because typescript doesn't handle JSDoc correctly
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
   },
   parserOptions: {
     project: true,
