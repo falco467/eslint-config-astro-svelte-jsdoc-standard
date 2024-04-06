@@ -3,7 +3,7 @@ module.exports = {
     'plugin:astro/recommended',
     'plugin:svelte/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'standard-with-typescript',
+    'love',
   ],
   rules: {
     // Needed for svelte reactivity assignment
