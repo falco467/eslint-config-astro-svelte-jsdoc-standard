@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "target": "ES2022",
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true
+  }
+}
