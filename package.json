@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-astro-svelte-jsdoc-standard",
   "type": "module",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Sharable ESLint config based on JavaScript Standard Style and @typescript-eslint/recommended-requiring-type-checking which supports .astro and .svelte files with JavaScript code using JSDoc comments for strong typing.",
   "main": "index.js",
   "repository": {
@@ -24,7 +24,8 @@
   "author": "falco467@gmail.com",
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "tsconfig.json"
   ],
   "dependencies": {
     "astro": ">=4",
