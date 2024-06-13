@@ -46,6 +46,7 @@ export default [
     rules: {
       // TODO: JSDoc Types are not handled correctly in Svelte files
       '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-unnecessary-conditionals': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
