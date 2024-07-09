@@ -34,6 +34,9 @@
     "eslint-plugin-svelte": ">=2",
     "globals": ">=15",
     "svelte": ">=4",
-    "typescript-eslint": "^8.0.0-alpha.33"
+    "typescript-eslint": "^8.0.0-alpha.41"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3"
   }
 }

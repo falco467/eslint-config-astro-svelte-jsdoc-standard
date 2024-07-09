@@ -17,8 +17,7 @@ export default [
     languageOptions: {
       parser: tsEslint.parser,
       parserOptions: {
-        project: true,
-        programs: false,
+        projectService: true,
         extraFileExtensions: ['.astro','.svelte']
       },
       globals: {
