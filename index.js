@@ -49,9 +49,7 @@ export default [
         { "argsIgnorePattern": "^_" }
       ],
       '@typescript-eslint/restrict-template-expressions': 'off',
-      '@typescript-eslint/no-magic-numbers': ['error', {
-        ignore: [0,1,-1]
-      }],
+      '@typescript-eslint/no-magic-numbers': 'off',
       '@stylistic/space-before-function-paren': ['error', 'always'],
       '@stylistic/arrow-parens': ['error', 'as-needed'],
     },
