@@ -2,7 +2,7 @@
 ![License](https://img.shields.io/github/license/falco467/eslint-config-astro-svelte-jsdoc-standard)
 ![GitHub issues](https://img.shields.io/github/issues/falco467/eslint-config-astro-svelte-jsdoc-standard)
 
-An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for JavaScript Projects using Astro and Svelte with JSDoc Type-Information that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has rules supporting type-information from [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
+An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for JavaScript Projects using Astro and Svelte with JSDoc Type-Information that is based on [eslint-config-love](https://github.com/mightyiam/eslint-config-love) and has rules supporting type-information from [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
 
 # Usage
 
@@ -12,16 +12,22 @@ Add all packages to your project:
 npm install --save-dev eslint-config-astro-svelte-jsdoc-standard
 ```
 
-Edit your `.eslintrc.js`:
+Edit your `eslint.config.js`:
 
 ```js
-module.exports = {
-  extends: [ 'eslint-config-astro-svelte-jsdoc-standard' ],
-  parserOptions: { tsconfigRootDir: __dirname }
-}
+import ecASJS from 'eslint-config-astro-svelte-jsdoc-standard'
+
+export default [
+  ...ecASJS,
+]
 ```
 
-You may want to override and configure [some `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) in ESLint when using this package.
+# Details
+
+The package will use all recommended rules from eslint, typescript-eslint (strictly type checked) and stylistic rules and love.
+Some type-safe rules are disabled for .svelte and .astro files since the parsers currently don't forward the complete
+type information to typescript-eslint.
+
 
 # Example command line usage:
 
