@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-astro-svelte-jsdoc-standard",
   "type": "module",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Sharable ESLint config based on JavaScript Standard Style and @typescript-eslint/recommended-requiring-type-checking which supports .astro and .svelte files with JavaScript code using JSDoc comments for strong typing.",
   "main": "index.js",
   "repository": {
@@ -31,7 +31,7 @@
     "@stylistic/eslint-plugin": ">=2",
     "astro-eslint-parser": ">=1",
     "eslint": ">=9",
-    "eslint-config-love": ">=98",
+    "eslint-config-love": ">=100",
     "eslint-plugin-astro": ">=1",
     "eslint-plugin-svelte": ">=2",
     "globals": ">=15",

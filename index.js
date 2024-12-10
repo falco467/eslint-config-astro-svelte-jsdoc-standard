@@ -37,6 +37,7 @@ export default [
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/restrict-template-expressions': 'off',
         '@typescript-eslint/no-magic-numbers': 'off',
+        'complexity': ['error', { variant: 'modified', max: 20 }],
         
         '@stylistic/max-statements-per-line': ['error', {max: 2}],
         '@typescript-eslint/no-unused-vars': [
