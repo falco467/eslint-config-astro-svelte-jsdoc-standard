@@ -1,4 +1,4 @@
-import eslint from '@eslint/js'
+import eslintJS from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import tsEslint from 'typescript-eslint'
 import globals from 'globals'
@@ -10,9 +10,9 @@ import epAstro from 'eslint-plugin-astro'
 import astroParser from 'astro-eslint-parser'
 
 export default [
-  eslint.configs.recommended,
-  stylistic.configs['recommended-flat'],
-  ...epSvelte.configs['flat/recommended'],
+  eslintJS.configs.recommended,
+  stylistic.configs['recommended'],
+  ...epSvelte.configs['recommended'],
   ...epAstro.configs.recommended,
 
   ...[
