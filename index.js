@@ -32,20 +32,23 @@ export default [
       },
       rules: {
         // opt out of too severe rules from love
-        '@typescript-eslint/init-declarations': 'off',
-        '@typescript-eslint/prefer-destructuring': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/init-declarations': 'off',
         '@typescript-eslint/no-magic-numbers': 'off',
-        'complexity': ['error', { variant: 'modified', max: 20 }],
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/prefer-destructuring': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        'no-negated-condition': 'off',
+        'no-plusplus': 'off',
+        'no-useless-assignment': 'off',
         
-        '@stylistic/max-statements-per-line': ['error', {max: 2}],
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          { "argsIgnorePattern": "^_" }
-        ],
-        '@stylistic/space-before-function-paren': ['error', 'always'],
         '@stylistic/arrow-parens': ['error', 'as-needed'],
+        '@stylistic/max-statements-per-line': ['error', {max: 2}],
+        '@stylistic/space-before-function-paren': ['error', 'always'],
+        '@typescript-eslint/no-unused-vars': ['error', { "argsIgnorePattern": "^_" }],
+        'complexity': ['error', { variant: 'modified', max: 20 }],
+        'eqeqeq': ['error', 'smart'],
+        'no-param-reassign': ['error', { 'props': false }],
       },
     },
   ].map(config => ({...config, ignores:["**/*.astro"]})),
