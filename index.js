@@ -1,18 +1,18 @@
 import eslintJS from '@eslint/js'
-import stylistic from '@stylistic/eslint-plugin'
-import tsEslint from 'typescript-eslint'
 import globals from 'globals'
 import love from 'eslint-config-love'
+import stylistic from '@stylistic/eslint-plugin'
+import tsEslint from 'typescript-eslint'
 
+import astroParser from 'astro-eslint-parser'
+import epAstro from 'eslint-plugin-astro'
 import epSvelte from 'eslint-plugin-svelte'
 import svelteParser from 'svelte-eslint-parser'
-import epAstro from 'eslint-plugin-astro'
-import astroParser from 'astro-eslint-parser'
 
 export default [
   eslintJS.configs.recommended,
-  stylistic.configs['recommended'],
-  ...epSvelte.configs['recommended'],
+  stylistic.configs.recommended,
+  ...epSvelte.configs.recommended,
   ...epAstro.configs.recommended,
 
   ...[
@@ -32,23 +32,19 @@ export default [
       },
       rules: {
         // opt out of too severe rules from love
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/init-declarations': 'off',
-        '@typescript-eslint/no-magic-numbers': 'off',
-        '@typescript-eslint/no-unsafe-return': 'off',
-        '@typescript-eslint/prefer-destructuring': 'off',
-        '@typescript-eslint/restrict-template-expressions': 'off',
-        'no-negated-condition': 'off',
-        'no-plusplus': 'off',
-        'no-useless-assignment': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off', // too much clutter with JSDoc @return Annotations
+        '@typescript-eslint/init-declarations': 'off', // uninitialized variables can convey clear meaning and are caught by TS
+        '@typescript-eslint/no-magic-numbers': 'off', // magic numbers flags too many false positives in attributes/HTML/CSS
+        '@typescript-eslint/prefer-destructuring': 'off', // destructuring is not always helpful
+        'eqeqeq': ['error', 'smart'], // allow x == null to catch null and undefined
+        'complexity': ['error', { variant: 'modified', max: 20 }], // 20 is more reasonable for complex codebase
+        'no-param-reassign': ['error', { 'props': false }], // props can be useful for reactivity and default values
+        'no-plusplus': ['error', { "allowForLoopAfterthoughts": true }], // plusplus is safe in for loop clauses
         
         '@stylistic/arrow-parens': ['error', 'as-needed'],
         '@stylistic/max-statements-per-line': ['error', {max: 2}],
         '@stylistic/space-before-function-paren': ['error', 'always'],
         '@typescript-eslint/no-unused-vars': ['error', { "argsIgnorePattern": "^_" }],
-        'complexity': ['error', { variant: 'modified', max: 20 }],
-        'eqeqeq': ['error', 'smart'],
-        'no-param-reassign': ['error', { 'props': false }],
       },
     },
   ].map(config => ({...config, ignores:["**/*.astro"]})),
@@ -78,8 +74,9 @@ export default [
       }
     },
     rules: {
-      '@typescript-eslint/no-magic-numbers': 'off',
-      'prefer-const': 'off',
+      'no-useless-assignment': 'error', // false positives in svelte files ($bindable) - caught by svelte-check
+      'prefer-const': 'off', // false positives ($state)
+      
       // JSDoc Types are not handled correctly in Svelte files: https://github.com/sveltejs/svelte-eslint-parser/issues/533
       // But these errors will be found by svelte-check
       '@typescript-eslint/no-unsafe-argument': 'off',

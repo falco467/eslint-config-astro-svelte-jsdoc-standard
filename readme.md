@@ -9,7 +9,7 @@ An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-c
 Add all packages to your project:
 
 ```
-npm install --save-dev eslint-config-astro-svelte-jsdoc-standard
+pnpm install --save-dev eslint-config-astro-svelte-jsdoc-standard
 ```
 
 Edit your `eslint.config.js`:
@@ -25,12 +25,12 @@ export default [
 # Details
 
 The package will use all recommended rules from eslint, typescript-eslint (strictly type checked) and stylistic rules and love.
-Some type-safe rules are disabled for .svelte and .astro files since the parsers currently don't forward the complete
-type information to typescript-eslint.
+Some type-safe rules are partially disabled for .svelte and .astro files since the parsers cannot forward jsdoc type information
+correctly to ESLint. But running svelte-check will catch type errors in svelte files.
 
 
 # Example command line usage:
 
 ```
-$ npx eslint .
+$ pnpm exec eslint src
 ```
