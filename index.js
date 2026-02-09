@@ -36,10 +36,12 @@ export default [
         '@typescript-eslint/init-declarations': 'off', // uninitialized variables can convey clear meaning and are caught by TS
         '@typescript-eslint/no-magic-numbers': 'off', // magic numbers flags too many false positives in attributes/HTML/CSS
         '@typescript-eslint/prefer-destructuring': 'off', // destructuring is not always helpful
-        'eqeqeq': ['error', 'smart'], // allow x == null to catch null and undefined
+        
         'complexity': ['error', { variant: 'modified', max: 20 }], // 20 is more reasonable for complex codebase
+        'eqeqeq': ['error', 'smart'], // allow x == null to catch null and undefined
         'no-param-reassign': ['error', { 'props': false }], // props can be useful for reactivity and default values
         'no-plusplus': ['error', { "allowForLoopAfterthoughts": true }], // plusplus is safe in for loop clauses
+        'no-negated-condition': 'off', // flags x != null shorthand
         
         '@stylistic/arrow-parens': ['error', 'as-needed'],
         '@stylistic/max-statements-per-line': ['error', {max: 2}],
@@ -74,9 +76,9 @@ export default [
       }
     },
     rules: {
-      'no-useless-assignment': 'error', // false positives in svelte files ($bindable) - caught by svelte-check
+      'no-useless-assignment': 'off', // false positives in svelte files ($bindable) - caught by svelte-check
       'prefer-const': 'off', // false positives ($state)
-      
+
       // JSDoc Types are not handled correctly in Svelte files: https://github.com/sveltejs/svelte-eslint-parser/issues/533
       // But these errors will be found by svelte-check
       '@typescript-eslint/no-unsafe-argument': 'off',
