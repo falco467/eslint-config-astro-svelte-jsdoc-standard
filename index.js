@@ -4,7 +4,7 @@ import love from 'eslint-config-love'
 import stylistic from '@stylistic/eslint-plugin'
 import tsEslint from 'typescript-eslint'
 
-import astroParser from 'astro-eslint-parser'
+import * as astroParser from 'astro-eslint-parser'
 import epAstro from 'eslint-plugin-astro'
 import epSvelte from 'eslint-plugin-svelte'
 import svelteParser from 'svelte-eslint-parser'

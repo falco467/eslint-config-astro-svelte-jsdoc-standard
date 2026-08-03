@@ -9,7 +9,7 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "es2024",
+    "target": "es2025",
     "verbatimModuleSyntax": true
   }
 }
